@@ -132,9 +132,9 @@ const Footer = () => {
       <div className="flex justify-center items-center w-full p-5 bg-slate-200">
         <div className="container">
           <div className="mx-5 flex md:flex-row flex-col md:justify-between justify-center items-center gap-5">
-            <div className="flex gap-5 items-center flex-wrap justify-center text-center md:order-first order-last">
-              <span>@2023 Estatein. All Right Reserved</span>
-              <span>
+            <div className="flex md:gap-5 gap-3 items-center flex-wrap justify-center text-center md:order-first order-last">
+              <span className="md:text-lg text-sm">@2023 Estatein. All Right Reserved.</span>
+              <span className="md:text-lg text-sm">
                 <Link>Terms & Conditions</Link>
               </span>
             </div>

@@ -57,7 +57,7 @@ const FeaturedProperties = () => {
     },
   ];
   return (
-    <div className="flex flex-col mx-5 justify-center items-center md:my-10 my-5 gap-5 w-full">
+    <div className="flex flex-col mx-5 justify-center items-center gap-5 w-full">
       <div className="flex flex-col gap-3 w-full md:px-5">
         <h1 className="text-3xl font-semibold">Featured Properties</h1>
         <div className="flex flex-row justify-between items-center">

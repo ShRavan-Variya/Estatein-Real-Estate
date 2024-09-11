@@ -51,7 +51,7 @@ const Navbar = () => {
                       : ""
                   }  px-5 py-2 cursor-pointer`}
                 >
-                  <Link>Home</Link>
+                  <Link to={"/"}>Home</Link>
                 </li>
                 <li
                   className={`${
@@ -60,7 +60,7 @@ const Navbar = () => {
                       : ""
                   }  px-5 py-2 cursor-pointer`}
                 >
-                  <Link>About Us</Link>
+                  <Link to={"/about"}>About Us</Link>
                 </li>
                 <li
                   className={`${
@@ -69,7 +69,7 @@ const Navbar = () => {
                       : ""
                   }  px-5 py-2 cursor-pointer`}
                 >
-                  <Link>Properties</Link>
+                  <Link to={"/properties"}>Properties</Link>
                 </li>
                 <li
                   className={`${
@@ -78,7 +78,7 @@ const Navbar = () => {
                       : ""
                   }  px-5 py-2 cursor-pointer`}
                 >
-                  <Link>Services</Link>
+                  <Link to={"/services"}>Services</Link>
                 </li>
               </ul>
             </div>
@@ -113,19 +113,19 @@ const Navbar = () => {
                     className="p-4 text-lg border-b hover:text-BgPurple cursor-pointer  font-bold"
                     onClick={() => setShowMenu(false)}
                   >
-                    <Link to={"/portfolio"}>About Us</Link>
+                    <Link to={"/about"}>About Us</Link>
                   </li>
                   <li
                     className="p-4 text-lg border-b hover:text-BgPurple cursor-pointer  font-bold"
                     onClick={() => setShowMenu(false)}
                   >
-                    <Link to={"/blogs"}>Properties</Link>
+                    <Link to={"/properties"}>Properties</Link>
                   </li>
                   <li
                     className={`p-4 text-lg hover:text-BgPurple cursor-pointer  font-bold border-b`}
                     onClick={() => setShowMenu(false)}
                   >
-                    <Link to={""}>Services</Link>
+                    <Link to={"/services"}>Services</Link>
                   </li>
                   <li
                     className="p-4 text-lg w-full flex text-center"
@@ -144,7 +144,7 @@ const Navbar = () => {
           </div>
         )}
       </header>
-      <div>
+      <div className="w-full">
         <Outlet/>
       </div>
       <div className="flex justify-center items-center w-full">

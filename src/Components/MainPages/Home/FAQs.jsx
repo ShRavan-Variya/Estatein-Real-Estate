@@ -35,25 +35,25 @@ const FAQs = () => {
     },
     {
       id: 4,
-      title: "How can I contact an Estatein agent?",
+      title: "How do I search for properties on Estatein?",
       description:
-        "Discover the different ways you can get in touch with our experienced agents.",
+        "Learn how to use our user-friendly search tools to find properties that match your criteria.",
     },
   ];
   return (
-    <div className="flex flex-col mx-5 justify-center items-center md:my-10 my-5 gap-5 w-full">
-        <div className="flex flex-row justify-between items-end  w-full md:px-5">
-      <div className="flex flex-col gap-3">
-        <h1 className="text-3xl font-semibold">Frequently Asked Questions</h1>
+    <div className="flex flex-col mx-5 justify-center items-center gap-5 w-full">
+      <div className="flex flex-row justify-between items-end  w-full md:px-5">
+        <div className="flex flex-col gap-3">
+          <h1 className="text-3xl font-semibold">Frequently Asked Questions</h1>
           <p className="md:w-4/5 w-full md:text-base text-sm">
             Find answers to common questions about Estatein's services, property
             listings, and the real estate process. We're here to provide clarity
             and assist you every step of the way.
           </p>
         </div>
-          <button className="border rounded-lg px-5 py-3 bg-[#f8f6ff] border-BgPurple text-BgPurple md:flex hidden">
-            View All FAQ's
-          </button>
+        <button className="border rounded-lg px-5 py-3 bg-[#f8f6ff] border-BgPurple text-BgPurple md:flex hidden w-fit">
+          View All FAQ's
+        </button>
       </div>
 
       <div className="md:px-5">
@@ -89,20 +89,24 @@ const FAQs = () => {
                 spaceBetween: 24,
               },
             }}
-            className="flex md:flex-row flex-col md:container w-72 md:p-5"
+            className="flex md:flex-row flex-col md:container w-72 md:p-5 h-full"
           >
             {properties?.map((data, index) => {
               return (
                 <SwiperSlide
-                  className="border rounded-lg md:p-5 p-3 flex flex-col gap-5"
+                  className="border rounded-lg md:p-5 p-3 flex flex-col gap-5 h-full"
                   key={index}
                 >
                   <div className="flex flex-col justify-center items-start gap-5">
-                    <h1 className="font-semibold text-xl">{data.title}</h1>
-                    <p className="text-sm">{data.description}</p>
-                    <button className="border border-BgPurple bg-BgPurple text-BgWhite rounded-lg md:px-5 px-3 py-3 text-sm md:text-base">
-                      Read More
-                    </button>
+                    <div className="flex flex-col gap-5 h-full">
+                      <h1 className="font-semibold text-xl">{data.title}</h1>
+                      <p className="text-sm">{data.description}</p>
+                    </div>
+                    <div>
+                      <button className="border border-BgPurple bg-BgPurple text-BgWhite rounded-lg md:px-5 px-3 py-3 text-sm md:text-base">
+                        Read More
+                      </button>
+                    </div>
                   </div>
                 </SwiperSlide>
               );
