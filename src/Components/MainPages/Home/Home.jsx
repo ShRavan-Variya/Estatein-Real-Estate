@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../../assets/Image/Image.png";
+import HomeImg from "../../../assets/Image/HomeImg.png";
 import { HiOutlineArrowUpRight } from "react-icons/hi2";
 import icon1 from "../../../assets/Image/icon1.png";
 import icon2 from "../../../assets/Image/icon2.png";
@@ -76,7 +76,7 @@ const Home = () => {
           </div>
         </div> */}
         <div className="lg:w-full lg:m-0 m-5 lg:rounded-none rounded-xl overflow-hidden flex justify-end">
-          <img src={Image} alt="" className="2xl:w-4/5" />
+          <img src={HomeImg} alt="" className="2xl:w-4/5" />
         </div>
       </div>
 

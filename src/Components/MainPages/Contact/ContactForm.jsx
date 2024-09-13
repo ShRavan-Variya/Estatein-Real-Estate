@@ -2,22 +2,23 @@ import React from "react";
 import { ChevronDown, Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const MessageForm = () => {
+const ContactForm = () => {
   return (
     <>
       <div className="flex flex-col gap-3 w-full">
-        <h1 className="text-3xl font-semibold">Let's Make it Happen</h1>
+        <h1 className="text-3xl font-semibold">Let's Connect</h1>
         <div className="flex flex-row justify-between items-center">
           <p className="w-full md:text-base text-sm">
-            Ready to take the first step toward your dream property? Fill out
-            the form below, and our real estate wizards will work their magic to
-            find your perfect match. Don't wait; let's embark on this exciting
-            journey together.
+            We're excited to connect with you and learn more about your real
+            estate goals. Use the form below to get in touch with Estatein.
+            Whether you're a prospective client, partner, or simply curious
+            about our services, we're here to answer your questions and provide
+            the assistance you need.
           </p>
         </div>
       </div>
       <form className="space-y-6 border md:p-10 p-5 rounded-lg w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <label
               htmlFor="firstName"
@@ -68,71 +69,32 @@ const MessageForm = () => {
               className="w-full border rounded-md p-3 "
             />
           </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            "Preferred Location",
-            "Property Type",
-            "No. of Bathrooms",
-            "No. of Bedrooms",
-          ].map((label) => (
-            <div key={label}>
-              <label
-                htmlFor={label.toLowerCase().replace(/ /g, "-")}
-                className="block text-sm font-medium mb-2"
-              >
-                {label}
-              </label>
-              <div className="relative">
-                <select
-                  id={label.toLowerCase().replace(/ /g, "-")}
-                  className="w-full border rounded-md p-3 appearance-none cursor-pointer"
-                >
-                  <option>Select {label}</option>
-                </select>
-                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 " />
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="budget" className="block text-sm font-medium mb-2">
-              Budget
+            <label htmlFor="" className="block text-sm font-medium mb-2">
+              Inquiry Type
             </label>
             <div className="relative">
               <select
-                id="budget"
+                id=""
                 className="w-full border rounded-md p-3 appearance-none cursor-pointer"
               >
-                <option>Select Budget</option>
+                <option>Select Inquiry Type</option>
               </select>
               <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 " />
             </div>
           </div>
           <div>
-            <label className="block text-sm font-medium mb-2">
-              Preferred Contact Method
+            <label htmlFor="" className="block text-sm font-medium mb-2">
+              How Did You Hear About Us?
             </label>
-            <div className="flex md:flex-row flex-col md:space-x-4 gap-4">
-              <div className="flex items-center border rounded-md p-3 flex-grow">
-                <Phone className=" mr-2" />
-                <input
-                  type="text"
-                  placeholder="Enter Your Number"
-                  className="bg-transparent w-full"
-                />
-              </div>
-              <div className="flex items-center border rounded-md p-3 flex-grow">
-                <Mail className=" mr-2" />
-                <input
-                  type="email"
-                  placeholder="Enter Your Email"
-                  className="bg-transparent w-full"
-                />
-              </div>
+            <div className="relative">
+              <select
+                id=""
+                className="w-full border rounded-md p-3 appearance-none cursor-pointer"
+              >
+                <option>Select</option>
+              </select>
+              <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 " />
             </div>
           </div>
         </div>
@@ -153,7 +115,7 @@ const MessageForm = () => {
           <label className="flex items-center">
             <input type="checkbox" className="form-checkbox" />
             <span className="ml-2 md:text-sm text-xs">
-              I agree with <Link className="underline"> Terms of Use</Link> and 
+              I agree with <Link className="underline"> Terms of Use</Link> and
               <Link className="underline"> Privacy Policy </Link>
             </span>
           </label>
@@ -169,4 +131,4 @@ const MessageForm = () => {
   );
 };
 
-export default MessageForm;
+export default ContactForm;

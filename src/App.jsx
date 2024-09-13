@@ -2,22 +2,24 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Common/Navbar";
 import Home from "./Components/MainPages/Home/Home";
-import './App.css'
 import About from "./Components/MainPages/About/About";
 import Properties from "./Components/MainPages/Properties/Properties";
 import Services from "./Components/MainPages/Services/Services";
+import Contact from "./Components/MainPages/Contact/Contact";
+import PropertyDetails from "./Components/MainPages/Properties/PropertyDetails";
 
 function App() {
-
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navbar />}>
-            <Route path="/" index element={<Home />} />
-            <Route path="/about" index element={<About />} />
-            <Route path="/properties" index element={<Properties />} />
-            <Route path="/services" index element={<Services />} />
+            <Route index element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/properties" element={<Properties />} />
+            <Route path="/properties/property-detail" element={<PropertyDetails />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
       </BrowserRouter>

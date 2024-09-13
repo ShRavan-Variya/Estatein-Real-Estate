@@ -82,8 +82,8 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <div className="md:flex hidden border rounded-lg px-5 py-2 text-BgPurple border-BgPurple bg-BgLightPurple">
-              <button>Contact Us</button>
+            <div className="md:flex hidden border rounded-lg px-5 py-2 text-BgPurple border-BgPurple bg-BgLightPurple cursor-pointer">
+              <Link to={"/contact"}>Contact Us</Link>
             </div>
             <div className="flex md:hidden">
               <span className="text-2xl cursor-pointer" onClick={() => setShowMenu(true)}>
@@ -132,7 +132,7 @@ const Navbar = () => {
                     onClick={() => setShowMenu(false)}
                   >
                     <Link
-                      to={"/lets_talk"}
+                      to={"/contact"}
                       className="w-full py-2 px-5 rounded-md font-semibold border text-BgPurple border-BgPurple bg-BgLightPurple"
                     >
                       Contact Us

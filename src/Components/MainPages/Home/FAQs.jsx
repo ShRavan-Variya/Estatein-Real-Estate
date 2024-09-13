@@ -113,7 +113,7 @@ const FAQs = () => {
             })}
           </Swiper>
         </div>
-        <div className="flex flex-row gap-5 items-center justify-between md:p-4 py-4">
+        <div className="flex flex-row gap-5 items-center justify-between md:mx-3 md:p-4 py-4">
           <button className="md:hidden text-sm flex border rounded-lg px-2 py-3 bg-[#f8f6ff] border-BgPurple text-BgPurple">
             View All FAQ's
           </button>
