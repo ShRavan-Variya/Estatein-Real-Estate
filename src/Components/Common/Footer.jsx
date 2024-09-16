@@ -12,8 +12,8 @@ const Footer = () => {
       <div className="flex justify-center items-center w-full">
         <div className="container">
           {/* <div className="mx-5 flex flex-row flex-wrap justify-between gap-5"> */}
-          <div className="mx-5 grid md:grid-cols-7 grid-cols-2 md:gap-5 gap-10 py-20">
-            <div className="flex flex-col gap-8 col-span-2">
+          <div className="mx-5 grid lg:grid-cols-7 md:grid-cols-3 grid-cols-2 gap-5 lg:gap-10 md:py-20 py-10">
+            <div className="flex flex-col gap-8 col-span-2 md:pb-0 pb-10">
               <div className="">
                 <img src={logo} alt="" className="h-10" />
               </div>
@@ -34,10 +34,10 @@ const Footer = () => {
                 </span>
               </div>
             </div>
-            <div className="flex md:justify-end justify-start">
-              <div className="flex flex-col gap-5">
-                <h1>Home</h1>
-                <ul className="font-semibold flex flex-col gap-2">
+            <div className="flex lg:justify-end justify-start md:border-r-0 border-r">
+              <div className="flex flex-col gap-5 md:border-b-0 border-b md:py-0 py-5 md:mr-0 mr-5 w-full">
+                <h1 className="text-lg">Home</h1>
+                <ul className="font-semibold flex flex-col gap-2 md:text-base text-sm">
                   <li>
                     <Link>Hero Section</Link>
                   </li>
@@ -56,10 +56,10 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="flex md:justify-end justify-start">
-              <div className="flex flex-col gap-5">
-                <h1>About Us</h1>
-                <ul className="font-semibold flex flex-col gap-2">
+            <div className="flex lg:justify-end justify-start ">
+              <div className="flex flex-col gap-5 md:border-b-0 border-b md:py-0 py-5 w-full">
+                <h1 className="text-lg">About Us</h1>
+                <ul className="font-semibold flex flex-col gap-2 md:text-base text-sm">
                   <li>
                     <Link>Our Story</Link>
                   </li>
@@ -78,10 +78,10 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="flex md:justify-center justify-start">
-              <div className="flex flex-col gap-5">
-                <h1>Properties</h1>
-                <ul className="font-semibold flex flex-col gap-2">
+            <div className="flex flex-col gap-2 justify-start  md:border-r-0 border-r">
+              <div className="flex flex-col gap-5 md:border-b-0 border-b md:py-0 py-5 md:mr-0 mr-5">
+                <h1 className="text-lg">Properties</h1>
+                <ul className="font-semibold flex flex-col gap-2 md:text-base text-sm">
                   <li>
                     <Link>Portfolio</Link>
                   </li>
@@ -90,11 +90,22 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
+              <div className="lg:hidden flex flex-col gap-5 md:border-b-0 border-b md:py-0 py-5 md:mr-0 mr-5 ">
+                <h1 className="text-lg">Contact Us</h1>
+                <ul className="font-semibold flex flex-col gap-2 md:text-base text-sm">
+                  <li>
+                    <Link>Contact Form</Link>
+                  </li>
+                  <li>
+                    <Link>Our Offices</Link>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="flex md:justify-end justify-start">
-              <div className="flex flex-col gap-5">
-                <h1>Services</h1>
-                <ul className="font-semibold flex flex-col gap-2">
+            <div className="flex lg:justify-end justify-start ">
+              <div className="flex flex-col gap-5 md:border-b-0 border-b md:py-0 py-5 w-full h-fit">
+                <h1 className="text-lg">Services</h1>
+                <ul className="font-semibold flex flex-col gap-2 md:text-base text-sm">
                   <li>
                     <Link>Valuation Mastery</Link>
                   </li>
@@ -113,10 +124,10 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="flex md:justify-end justify-start">
+            <div className="lg:flex hidden lg:justify-end justify-start">
               <div className="flex flex-col gap-5">
-                <h1>Contact Us</h1>
-                <ul className="font-semibold flex flex-col gap-2">
+                <h1 className="text-lg">Contact Us</h1>
+                <ul className="font-semibold flex flex-col gap-2 md:text-base text-sm">
                   <li>
                     <Link>Contact Form</Link>
                   </li>

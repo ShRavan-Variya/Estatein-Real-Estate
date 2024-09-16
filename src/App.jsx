@@ -7,11 +7,13 @@ import Properties from "./Components/MainPages/Properties/Properties";
 import Services from "./Components/MainPages/Services/Services";
 import Contact from "./Components/MainPages/Contact/Contact";
 import PropertyDetails from "./Components/MainPages/Properties/PropertyDetails";
+import ScrollToTop from "./Components/Common/ScrollToTop";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<Navbar />}>
             <Route index element={<Home />} />

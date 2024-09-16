@@ -15,7 +15,7 @@ const Explore = () => {
         <div className="container z-30">
           <div className="flex md:flex-row flex-col gap-5 justify-between items-center mx-5">
             <div className="flex flex-col gap-3 md:w-5/6">
-              <h1 className="md:text-4xl text-3xl font-semibold">
+              <h1 className="md:text-4xl text-2xl font-semibold">
                 Start Your Real Estate Journey Today
               </h1>
               <p>

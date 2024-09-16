@@ -21,6 +21,7 @@ import Explore from "../../Common/Explore";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ContactForm from "./ContactForm";
+import { IoSparklesSharp } from "react-icons/io5";
 
 const Contact = () => {
   return (
@@ -28,7 +29,7 @@ const Contact = () => {
       <div className="flex flex-col border-b w-full justify-center items-center">
         <div className="container w-full md:py-14 py-10">
           <div className="flex flex-col mx-5 gap-5">
-            <h1 className="text-4xl font-bold">
+            <h1 className="md:text-4xl text-2xl font-bold">
               Get in Touch with Estatein
             </h1>
             <p className="md:flex hidden ">
@@ -88,6 +89,9 @@ const Contact = () => {
 
           <div className="flex flex-col justify-center items-start gap-10 w-full">
             <div className="flex flex-col gap-3 w-full">
+              <span className="flex gap-1 items-center justify-start w-full">
+                <IoSparklesSharp className="text-3xl" />
+              </span>
               <h1 className="text-3xl font-semibold">
                 Discover Our Office Locations
               </h1>
@@ -112,7 +116,7 @@ const Contact = () => {
               <div className="md:p-10 p-5 border rounded-xl shadow-lg flex flex-col gap-8 justify-between items-start">
                 <div className="flex flex-col gap-4">
                   <p className="text-sm">Main Headquarters</p>
-                  <h1 className="text-2xl font-bold">
+                  <h1 className="md:text-2xl text-xl font-bold">
                     123 Estatein Plaza, City Center, Metropolis
                   </h1>
                   <p>
@@ -143,7 +147,7 @@ const Contact = () => {
               <div className="md:p-10 p-5 border rounded-xl shadow-lg flex flex-col gap-8 justify-between items-start">
                 <div className="flex flex-col gap-4">
                   <p className="text-sm">Regional Offices</p>
-                  <h1 className="text-2xl font-bold">
+                  <h1 className="md:text-2xl text-xl font-bold">
                     456 Urban Avenue, Downtown District, Metropolis{" "}
                   </h1>
                   <p>

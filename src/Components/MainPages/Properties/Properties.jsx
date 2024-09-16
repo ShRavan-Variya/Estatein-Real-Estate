@@ -18,7 +18,7 @@ import {
 import img1 from "../../../assets/Image/img1.png";
 import img2 from "../../../assets/Image/img2.png";
 import img3 from "../../../assets/Image/img3.png";
-import { IoBed } from "react-icons/io5";
+import { IoBed, IoSparklesSharp } from "react-icons/io5";
 import { FaBath } from "react-icons/fa";
 import { HiMiniBuildingOffice } from "react-icons/hi2";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
@@ -32,7 +32,7 @@ import { Link, useNavigate } from "react-router-dom";
 import MessageForm from "./MessageForm";
 
 const Properties = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const properties = [
     {
       id: 1,
@@ -77,7 +77,7 @@ const Properties = () => {
   ];
 
   const handleClick = () => {
-    navigate('/properties/property-detail');
+    navigate("/properties/property-detail");
   };
   return (
     <div className="flex justify-center items-center flex-col md:gap-20 gap-10">
@@ -120,11 +120,94 @@ const Properties = () => {
         </div>
       </div> */}
 
-      <div className="container">
+      <main className="w-full">
+        <div className="flex justify-center items-center flex-col border-b">
+          <div className="container flex flex-col gap-3 py-14">
+            <div className="flex flex-col mx-5">
+              <h1 className="md:text-4xl text-2xl font-bold mb-4">
+                Find Your Dream Property
+              </h1>
+              <p className="text-gray-400 max-w-3xl">
+                Welcome to Estatein, where your dream property awaits in every
+                corner of our beautiful world. Explore our curated selection of
+                properties, each offering a unique story and a chance to
+                redefine your life. With categories to suit every dreamer, your
+                journey.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="md:relative flex justify-center items-center md:mt-0 mt-5 mx-5">
+          <div className="md:absolute lg:-bottom-24 -bottom-40">
+            <div className="relative mb-4 max-w-4xl mx-auto">
+              <input
+                type="text"
+                placeholder="Search For A Property"
+                className="w-full border rounded-t-lg py-5 px-4 pr-12"
+              />
+              <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-BgPurple text-white px-4 py-3 rounded-lg flex items-center">
+                <Search className="w-4 h-4 md:mr-2" />
+                <span className="md:flex hidden">Find Property</span>
+              </button>
+            </div>
+
+            <div className="flex justify-center items-center gap-4 lg:flex-nowrap flex-wrap">
+              {[
+                { name: "Location", icon: CiLocationOn },
+                { name: "Property Type", icon: HiHomeModern },
+                { name: "Pricing Range", icon: SiHackthebox },
+                { name: "Property Size", icon: SiHackthebox },
+                { name: "Build Year", icon: BsCalendar },
+              ].map(({ name, icon: Icon }) => (
+                <div className="flex flex-row justify-center items-center gap-3 border rounded-lg py-3 md:w-fit w-full">
+                  <span className="border-r px-3">
+                    <Icon className="text-lg" />
+                  </span>
+                  <button
+                    type="button"
+                    className="inline-flex md:justify-center justify-between items-center bg-white text-sm font-medium pr-3 2xl:gap-4 md:w-fit w-full"
+                    id="menu-button"
+                    // aria-expanded={dropList}
+                    aria-haspopup="true"
+                    // onClick={() => setDropList(!dropList)}
+                  >
+                    <p className="text-sm">
+                      <span className="font-bold">{name}</span>
+                    </p>
+                    <IoIosArrowDown
+                      className={`ml-2 -mr-1 text-2xl transform transition-transform duration-300 `}
+                      aria-hidden="true"
+                    />
+                  </button>
+                </div>
+                //   ${dropList ? "rotate-180" : "rotate-0"}
+              ))}
+              {/* <div
+              key={name}
+              className="flex flex-row border  rounded-lg py-3 px-4 gap-2"
+            >
+              <div className="flex items-center pointer-events-none border-r pr-3">
+                <Icon className="w-4 h-4" />
+              </div>
+              <select className="">
+                <option>{name}</option>
+              </select>
+              <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none" />
+            </div> */}
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div className="container lg:mt-14 md:mt-20">
         <div className="flex justify-center items-center flex-col md:gap-20 gap-10 mx-5">
           <div className="flex flex-col justify-center items-center gap-5 w-full">
             <div className="flex flex-col gap-3 w-full">
-              <h1 className="text-3xl font-semibold">
+              <span className="flex gap-1 items-center justify-start w-full">
+                <IoSparklesSharp className="text-3xl" />
+              </span>
+              <h1 className="md:text-3xl text-2xl font-semibold">
                 Discover a World of Possibilities
               </h1>
               <div className="flex flex-row justify-between items-center">
@@ -136,8 +219,8 @@ const Properties = () => {
               </div>
             </div>
 
-            <div className="md:px-5">
-              <div className="relative flex flex-col items-center justify-center ">
+            <div className="">
+              <div className="relative flex flex-col items-center justify-center pb-5 border-b">
                 <Swiper
                   modules={[Autoplay, Navigation]}
                   slidesPerView={3}
@@ -169,12 +252,13 @@ const Properties = () => {
                       spaceBetween: 24,
                     },
                   }}
-                  className="flex md:flex-row flex-col  md:container w-72 md:p-5"
+                  // className="flex md:flex-row flex-col  md:container w-72 md:p-5"
+                  className="grid grid-cols-3 md:container w-full md:pb-5 h-full"
                 >
                   {properties?.map((data, index) => {
                     return (
                       <SwiperSlide
-                        className="border rounded-lg md:p-5 p-3 flex flex-col gap-5"
+                        className="border rounded-lg md:p-5 p-3 w-full flex flex-col gap-5"
                         key={index}
                       >
                         <div>
@@ -220,7 +304,7 @@ const Properties = () => {
                   })}
                 </Swiper>
               </div>
-              <div className="flex flex-row gap-5 items-center justify-between w-full md:p-5 md:py-0 py-5">
+              <div className="flex flex-row gap-5 items-center justify-between py-4">
                 <span className="hidden md:flex gap-1">
                   <b>01</b> of 10
                 </span>

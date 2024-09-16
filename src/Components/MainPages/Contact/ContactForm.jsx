@@ -1,11 +1,15 @@
 import React from "react";
 import { ChevronDown, Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import { IoSparklesSharp } from "react-icons/io5";
 
 const ContactForm = () => {
   return (
     <>
       <div className="flex flex-col gap-3 w-full">
+      <span className="flex gap-1 items-center justify-start w-full">
+          <IoSparklesSharp className="text-3xl" />
+        </span>
         <h1 className="text-3xl font-semibold">Let's Connect</h1>
         <div className="flex flex-row justify-between items-center">
           <p className="w-full md:text-base text-sm">

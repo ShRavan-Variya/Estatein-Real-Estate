@@ -11,6 +11,7 @@ import FAQs from "./FAQs";
 import { FaArrowRight } from "react-icons/fa";
 import { BsArrowUpRight } from "react-icons/bs";
 import Explore from "../../Common/Explore";
+import { LuSparkle } from "react-icons/lu";
 
 const Home = () => {
   return (
@@ -19,7 +20,7 @@ const Home = () => {
         <div className="relative flex lg:justify-end order-2 lg:order-first">
           <div className="flex justify-center flex-col gap-10 mx-5 2xl:w-3/4 lg:w-5/6 py-5">
             <div className="flex flex-col gap-4">
-              <h1 className="md:text-5xl text-3xl font-semibold">
+              <h1 className="md:text-5xl text-2xl font-semibold">
                 Discover Your Dream Property with Estatein
               </h1>
               <p>

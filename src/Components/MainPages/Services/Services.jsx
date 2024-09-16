@@ -18,6 +18,7 @@ import icon13 from "../../../assets/Image/icon13.png";
 import icon14 from "../../../assets/Image/icon14.png";
 import { FaGraduationCap, FaStar } from "react-icons/fa";
 import { MdGroups } from "react-icons/md";
+import { IoSparklesSharp } from "react-icons/io5";
 
 const Services = () => {
   return (
@@ -25,17 +26,17 @@ const Services = () => {
       <div className="flex flex-col border-b w-full justify-center items-center ">
         <div className="container w-full py-14">
           <div className="flex flex-col mx-5">
-            <h1 className="text-4xl font-bold mb-4">
+            <h1 className="md:text-4xl text-2xl font-bold mb-4">
               Elevate Your Real Estate Experience
             </h1>
-            <p className="text-gray-400 mb-8 max-w-3xl">
+            <p className="text-gray-400 max-w-3xl">
               Welcome to Estatein, where your real estate aspirations meet
               expert guidance. Explore our comprehensive range of services, each
               designed to cater to your unique needs and dreams.
             </p>
           </div>
         </div>
-        <div className="grid md:grid-cols-4 grid-cols-2 lg:gap-6 gap-3 mx-5 md:p-6 p-3  border-8 w-full">
+        <div className="grid md:grid-cols-4 grid-cols-2 lg:gap-6 gap-3 mx-5 md:p-6 p-3 shadow-custom w-full">
           <div className="relative border rounded-lg md:p-5 p-3 flex flex-col justify-center items-center text-center gap-5">
             <span className="absolute md:top-5 md:right-5 top-3 right-3 text-2xl">
               <HiOutlineArrowUpRight />
@@ -71,8 +72,11 @@ const Services = () => {
 
       <div className="container w-full">
         <div className="flex flex-col justify-center items-center md:gap-20 gap-10 w-full">
-          <div className="flex flex-col gap-14 justify-center mx-5">
+          <div className="flex flex-col md:gap-14 gap-10 justify-center mx-5">
             <div className="flex flex-col gap-5">
+              <span className="flex gap-1 items-center justify-start w-full">
+                <IoSparklesSharp className="text-3xl" />
+              </span>
               <h1 className="font-semibold md:text-4xl text-2xl">
                 Unlock Property Value
               </h1>
@@ -87,9 +91,9 @@ const Services = () => {
             <div className="flex flex-col justify-center items-center gap-5">
               <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
                 <div className="flex flex-col gap-4 p-5 border rounded-xl">
-                  <div className="flex gap-4 items-center">
-                    <img src={icon10} alt="" className="w-16" />
-                    <span className="text-xl font-semibold">
+                  <div className="flex md:gap-4 gap-2 items-center">
+                    <img src={icon10} alt="" className="md:w-16 w-14" />
+                    <span className="md:text-xl text-lg font-semibold">
                       Valuation Mastery
                     </span>
                   </div>
@@ -99,9 +103,9 @@ const Services = () => {
                   </span>
                 </div>
                 <div className="flex flex-col gap-4 p-5 border rounded-xl">
-                  <div className="flex gap-4 items-center">
-                    <img src={icon5} alt="" className="w-16" />
-                    <span className="text-xl font-semibold">
+                  <div className="flex md:gap-4 gap-2 items-center">
+                    <img src={icon5} alt="" className="md:w-16 w-14" />
+                    <span className="md:text-xl text-lg font-semibold">
                       Strategic Marketing
                     </span>
                   </div>
@@ -111,9 +115,9 @@ const Services = () => {
                   </span>
                 </div>
                 <div className="flex flex-col gap-4 p-5 border rounded-xl">
-                  <div className="flex gap-4 items-center">
-                    <img src={icon9} alt="" className="w-16" />
-                    <span className="text-xl font-semibold">
+                  <div className="flex md:gap-4 gap-2 items-center">
+                    <img src={icon9} alt="" className="md:w-16 w-14" />
+                    <span className="md:text-xl text-lg font-semibold">
                       Negotiation Wizardry
                     </span>
                   </div>
@@ -125,9 +129,9 @@ const Services = () => {
               </div>
               <div className="grid md:grid-cols-3 grid-cols-1 md:gap-5">
                 <div className="flex flex-col gap-4 p-5 border rounded-xl">
-                  <div className="flex gap-4 items-center">
-                    <img src={icon6} alt="" className="w-16" />
-                    <span className="text-xl font-semibold">
+                  <div className="flex md:gap-4 gap-2 items-center">
+                    <img src={icon6} alt="" className="md:w-16 w-14" />
+                    <span className="md:text-xl text-lg font-semibold">
                       Closing Success
                     </span>
                   </div>
@@ -146,7 +150,7 @@ const Services = () => {
                   }}
                 >
                   <div className="flex md:flex-row flex-col w-full md:justify-between gap-4">
-                    <span className="text-xl font-semibold">
+                    <span className="md:text-xl text-lg font-semibold">
                       Unlock the Value of Your Property Today
                     </span>
                     <button className="border border-BgPurple text-BgPurple rounded-lg px-5 py-3 bg-BgLightPurple md:w-fit w-full">
@@ -163,8 +167,11 @@ const Services = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-14 justify-center mx-5">
+          <div className="flex flex-col md:gap-14 gap-10 justify-center mx-5">
             <div className="flex flex-col gap-5">
+              <span className="flex gap-1 items-center justify-start w-full">
+                <IoSparklesSharp className="text-3xl" />
+              </span>
               <h1 className="font-semibold md:text-4xl text-2xl">
                 Effortless Property Management
               </h1>
@@ -179,9 +186,9 @@ const Services = () => {
             <div className="flex flex-col justify-center items-center gap-5">
               <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
                 <div className="flex flex-col gap-4 p-5 border rounded-xl">
-                  <div className="flex gap-4 items-center">
-                    <img src={icon11} alt="" className="w-16" />
-                    <span className="text-xl font-semibold">
+                  <div className="flex md:gap-4 gap-2 items-center">
+                    <img src={icon11} alt="" className="md:w-16 w-14" />
+                    <span className="md:text-xl text-lg font-semibold">
                       Tenant Harmony
                     </span>
                   </div>
@@ -191,9 +198,9 @@ const Services = () => {
                   </span>
                 </div>
                 <div className="flex flex-col gap-4 p-5 border rounded-xl">
-                  <div className="flex gap-4 items-center">
-                    <img src={icon7} alt="" className="w-16" />
-                    <span className="text-xl font-semibold">
+                  <div className="flex md:gap-4 gap-2 items-center">
+                    <img src={icon7} alt="" className="md:w-16 w-14" />
+                    <span className="md:text-xl text-lg font-semibold">
                       Maintenance Ease
                     </span>
                   </div>
@@ -203,9 +210,9 @@ const Services = () => {
                   </span>
                 </div>
                 <div className="flex flex-col gap-4 p-5 border rounded-xl">
-                  <div className="flex gap-4 items-center">
-                    <img src={icon8} alt="" className="w-16" />
-                    <span className="text-xl font-semibold">
+                  <div className="flex md:gap-4 gap-2 items-center">
+                    <img src={icon8} alt="" className="md:w-16 w-14" />
+                    <span className="md:text-xl text-lg font-semibold">
                       Financial Peace of Mind
                     </span>
                   </div>
@@ -217,9 +224,9 @@ const Services = () => {
               </div>
               <div className="grid md:grid-cols-3 grid-cols-1 md:gap-5">
                 <div className="flex flex-col gap-4 p-5 border rounded-xl">
-                  <div className="flex gap-4 items-center">
-                    <img src={icon12} alt="" className="w-16" />
-                    <span className="text-xl font-semibold">
+                  <div className="flex md:gap-4 gap-2 items-center">
+                    <img src={icon12} alt="" className="md:w-16 w-14" />
+                    <span className="md:text-xl text-lg font-semibold">
                       Legal Guardian
                     </span>
                   </div>
@@ -238,7 +245,7 @@ const Services = () => {
                   }}
                 >
                   <div className="flex md:flex-row flex-col w-full md:justify-between gap-4">
-                    <span className="text-xl font-semibold">
+                    <span className="md:text-xl text-lg font-semibold">
                       Experience Effortless Property Management
                     </span>
                     <button className="border border-BgPurple text-BgPurple rounded-lg px-5 py-3 bg-BgLightPurple md:w-fit w-full">
@@ -259,6 +266,9 @@ const Services = () => {
           <div className="grid lg:grid-cols-3 grid-cols-1 gap-10 mx-5">
             <div className="flex flex-col gap-5 justify-center">
               <div className="flex flex-col gap-5">
+                <span className="flex gap-1 items-center justify-start w-full">
+                  <IoSparklesSharp className="text-3xl" />
+                </span>
                 <h1 className="font-semibold md:text-4xl text-2xl">
                   Smart Investments, Informed Decisions
                 </h1>
@@ -278,7 +288,7 @@ const Services = () => {
                 }}
               >
                 <div className="flex md:flex-row flex-col w-full md:justify-between gap-4">
-                  <span className="text-xl font-semibold">
+                  <span className="md:text-xl text-lg font-semibold">
                     Experience Effortless Property Management
                   </span>
                 </div>
@@ -297,12 +307,12 @@ const Services = () => {
             </div>
             <div className="md:col-span-2  grid gap-5">
               <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
-                <div className="flex flex-col gap-5 border-4 rounded-xl p-6">
-                  <div className="flex gap-4 items-center">
+                <div className="flex flex-col gap-5 shadow-xl rounded-xl p-6">
+                  <div className="flex md:gap-4 gap-2 items-center">
                     <span className="">
                       <img src={icon10} alt="" className="w-14" />
                     </span>
-                    <span className="text-xl font-semibold">
+                    <span className="md:text-xl text-lg font-semibold">
                       Market Insight
                     </span>
                   </div>
@@ -312,12 +322,12 @@ const Services = () => {
                     conditions
                   </span>
                 </div>
-                <div className="flex flex-col gap-5 border-4 rounded-xl p-6">
-                  <div className="flex gap-4 items-center">
+                <div className="flex flex-col gap-5 shadow-xl rounded-xl p-6">
+                  <div className="flex md:gap-4 gap-2 items-center">
                     <span className="">
                       <img src={icon13} alt="" className="w-14" />
                     </span>
-                    <span className="text-xl font-semibold">
+                    <span className="md:text-xl text-lg font-semibold">
                       ROI Assessment
                     </span>
                   </div>
@@ -329,12 +339,12 @@ const Services = () => {
                 </div>
               </div>
               <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
-                <div className="flex flex-col gap-5 border-4 rounded-xl p-6">
-                  <div className="flex gap-4 items-center">
+                <div className="flex flex-col gap-5 shadow-xl rounded-xl p-6">
+                  <div className="flex md:gap-4 gap-2 items-center">
                     <span className="">
                       <img src={icon14} alt="" className="w-14" />
                     </span>
-                    <span className="text-xl font-semibold">
+                    <span className="md:text-xl text-lg font-semibold">
                       Customized Strategies
                     </span>
                   </div>
@@ -344,12 +354,12 @@ const Services = () => {
                     needs
                   </span>
                 </div>
-                <div className="flex flex-col gap-5 border-4 rounded-xl p-6">
-                  <div className="flex gap-4 items-center">
+                <div className="flex flex-col gap-5 shadow-xl rounded-xl p-6">
+                  <div className="flex md:gap-4 gap-2 items-center">
                     <span className="">
                       <img src={icon12} alt="" className="w-14" />
                     </span>
-                    <span className="text-xl font-semibold">
+                    <span className="md:text-xl text-lg font-semibold">
                       Diversification Mastery
                     </span>
                   </div>

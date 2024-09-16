@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Explore from "../../Common/Explore";
 import FAQs from "../Home/FAQs";
 import pro1 from "../../../assets/Image/pro1.png";
+import img1 from "../../../assets/Image/img1.png";
+import img2 from "../../../assets/Image/img2.png";
+import img3 from "../../../assets/Image/img3.png";
 import pro2 from "../../../assets/Image/pro2.png";
 import pro3 from "../../../assets/Image/pro3.png";
 import pro4 from "../../../assets/Image/pro4.png";
@@ -10,19 +13,42 @@ import pro6 from "../../../assets/Image/pro6.png";
 import pro7 from "../../../assets/Image/pro7.png";
 import { Link } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
-import { IoBed } from "react-icons/io5";
+import { IoBed, IoSparklesSharp } from "react-icons/io5";
 import { FaBath } from "react-icons/fa";
 import { BiSolidZap } from "react-icons/bi";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const PropertyDetails = () => {
-  const images = [pro1, pro2, pro3, pro4, pro5, pro6, pro7, pro1];
+  const images = [img1, img2, img3, pro4, pro5, pro6, pro7, pro1];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const totalSlides = images.length;
+
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.realIndex);
+  };
+
+  const CustomPagination = () => {
+    return (
+      <div className="flex justify-center items-center gap-1 ">
+        {Array.from({ length: totalSlides }).map((_, index) => (
+          <div
+            key={index}
+            className={`h-1 md:w-4 w-3 rounded-full transition-all duration-300 ${
+              index === activeIndex ? "bg-BgPurple" : "bg-gray-300"
+            }`}
+          ></div>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <div className="flex flex-col justify-center items-center md:gap-20 gap-10 w-full">
       <div className="container flex justify-center items-center w-full">
@@ -30,89 +56,100 @@ const PropertyDetails = () => {
           <div className="flex justify-center items-center w-full">
             <div className="flex flex-col gap-5 justify-center items-center w-full">
               <div className="flex flex-col gap-10 w-full">
-                <div className="flex justify-between items-center w-full">
-                  <div className="flex gap-4 items-center">
+                <div className="mx-5 flex md:flex-row flex-col justify-between gap-2 md:items-center items-start">
+                  <div className="flex gap-4 2xl:w-60 lg:w-64 md:w-72">
                     <h1 className="font-semibold text-xl">
                       Seaside Serenity Villa
                     </h1>
-                    <span className="flex gap-4 items-center border rounded px-4 py-0.5">
+                  </div>
+                  <div className="w-full flex justify-between items-center">
+                    <span className="flex gap-4 items-center border rounded md:px-4 px-1 py-0.5 md:text-base text-xs">
                       <FaLocationDot />
                       Malibu, California
                     </span>
-                  </div>
-                  <div className="">
-                    <span>Price</span>
-                    <h1 className="font-semibold text-lg">$1,250,000</h1>
+                    <div className="flex md:flex-col flex-row gap-3 md:items-start items-center">
+                      <span>Price</span>
+                      <h1 className="font-semibold text-lg">$1,250,000</h1>
+                    </div>
                   </div>
                 </div>
-                <div className="border rounded-lg md:p-10 p-5 flex flex-col gap-5">
-                  <div className="flex flex-row h-28 gap-2 w-full border border-lg p-2">
-                    {images?.map((img, index) => (
-                      <img src={img} alt="" className="h-full w-full" />
-                    ))}
-                  </div>
-
-                  <div className="flex flex-col justify-center items-center gap-5">
-                    <Swiper
-                      modules={[Autoplay, Navigation]}
-                      slidesPerView={3}
-                      spaceBetween={24}
-                      loop={true}
-                      autoplay={{
-                        delay: 3500,
-                        disableOnInteraction: false,
-                      }}
-                      navigation={{
-                        nextEl: ".custom-next-feature",
-                        prevEl: ".custom-prev-feature",
-                      }}
-                      breakpoints={{
-                        320: {
-                          slidesPerView: 1,
-                          spaceBetween: 20,
-                        },
-                        640: {
-                          slidesPerView: 1,
-                          spaceBetween: 20,
-                        },
-                        768: {
-                          slidesPerView: 2,
-                          spaceBetween: 24,
-                        },
-                        1024: {
-                          slidesPerView: 2,
-                          spaceBetween: 24,
-                        },
-                      }}
-                      className="grid grid-cols-2 w-full md:p-5"
-                    >
+                <div className="mx-5 border rounded-lg md:p-10 p-5 flex flex-col gap-5">
+                  <div className="flex md:flex-col flex-col-reverse gap-5">
+                    <div className="flex flex-row md:h-28 h-16 gap-2 w-full border border-lg p-2 overflow-auto rounded-lg">
                       {images?.map((img, index) => (
-                        <SwiperSlide key={index}>
-                          <div className="h-full w-full">
-                            <img
-                              src={img}
-                              alt=""
-                              className="object-cover w-full h-full rounded-lg"
-                            />
-                          </div>
-                        </SwiperSlide>
+                        <img
+                          src={img}
+                          alt=""
+                          className="md:h-full md:w-full rounded-lg"
+                        />
                       ))}
-                    </Swiper>
-                    <div className="flex flex-row gap-2 items-center">
-                      <span className="custom-prev-feature md:text-xl text-lg cursor-pointer border border-BgPurple rounded-full md:p-2 p-1 text-BgPurple bg-BgLightPurple">
+                    </div>
+
+                    <div className="flex flex-col justify-center items-center gap-5">
+                      <Swiper
+                        modules={[Autoplay, Navigation, Pagination]}
+                        slidesPerView={3}
+                        spaceBetween={24}
+                        loop={true}
+                        autoplay={{
+                          delay: 3500,
+                          disableOnInteraction: false,
+                        }}
+                        onSlideChange={handleSlideChange}
+                        navigation={{
+                          nextEl: ".custom-next",
+                          prevEl: ".custom-prev",
+                        }}
+                        breakpoints={{
+                          320: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                          },
+                          640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                          },
+                          768: {
+                            slidesPerView: 2,
+                            spaceBetween: 24,
+                          },
+                          1024: {
+                            slidesPerView: 2,
+                            spaceBetween: 24,
+                          },
+                        }}
+                        className="grid grid-cols-2 w-full md:p-5"
+                      >
+                        {images?.map((img, index) => (
+                          <SwiperSlide key={index}>
+                            <div className="h-full w-full">
+                              <img
+                                src={img}
+                                alt=""
+                                className="object-cover w-full h-full rounded-lg"
+                              />
+                            </div>
+                          </SwiperSlide>
+                        ))}
+                      </Swiper>
+                    </div>
+                  </div>
+                  <div className="flex w-full justify-center items-center">
+                    <div className="flex flex-row gap-2 md:w-fit w-full justify-between items-center border p-2 rounded-full">
+                      <span className="custom-prev text-xl cursor-pointer border border-BgPurple rounded-full md:p-2 p-1 text-BgPurple bg-BgLightPurple">
                         <BsArrowLeft />
                       </span>
-                      <span className="flex gap-1">
-                        
+                      <span className="">
+                        <CustomPagination />
                       </span>
-                      <span className="custom-next-feature md:text-xl text-lg cursor-pointer border border-BgPurple rounded-full md:p-2 p-1 text-BgPurple bg-BgLightPurple">
+                      <span className="custom-next text-xl cursor-pointer border border-BgPurple rounded-full md:p-2 p-1 text-BgPurple bg-BgLightPurple">
                         <BsArrowRight />
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
+              <div className="grid md:grid-cols-2 grid-cols-1 gap-5 mx-5">
                 <div className="flex flex-col lg:p-10 p-5 border rounded-lg h-fit">
                   <div className="pb-5 border-b">
                     <h1 className="font-semibold text-xl">Description</h1>
@@ -217,6 +254,9 @@ const PropertyDetails = () => {
 
           <div className="grid md:grid-cols-3 grid-cols-1 mx-5 gap-10">
             <div className="flex flex-col gap-5">
+              <span className="flex gap-1 items-center justify-start w-full">
+                <IoSparklesSharp className="text-3xl" />
+              </span>
               <h1 className="text-4xl font-semibold">
                 Inquire About Seaside Serenity Villa
               </h1>
@@ -342,6 +382,9 @@ const PropertyDetails = () => {
 
           <div className="flex flex-col gap-10 mx-5">
             <div className="flex flex-col gap-3">
+              <span className="flex gap-1 items-center justify-start w-full">
+                <IoSparklesSharp className="text-3xl" />
+              </span>
               <h1 className="font-semibold text-3xl">
                 Comprehensive Pricing Details
               </h1>
@@ -581,6 +624,7 @@ const PropertyDetails = () => {
               </div>
             </div>
           </div>
+          
           <FAQs />
         </div>
       </div>

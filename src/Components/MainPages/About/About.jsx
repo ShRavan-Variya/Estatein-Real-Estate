@@ -20,6 +20,7 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import Explore from "../../Common/Explore";
+import { IoSparklesSharp } from "react-icons/io5";
 
 const About = () => {
   const Experience = [
@@ -91,11 +92,15 @@ const About = () => {
     <div className="flex flex-col justify-center items-center w-full md:gap-20 gap-10">
       <div className="container">
         <div className="flex justify-center items-center flex-col md:gap-20 gap-10 mx-5">
-        
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 md:mt-20 mt-10">
             <div className="flex flex-col gap-14 justify-center order-2 lg:order-first">
               <div className="flex flex-col gap-5">
-                <h1 className="font-semibold md:text-4xl text-2xl">Our Journey</h1>
+                <span className="flex gap-1 items-center justify-start w-full">
+                  <IoSparklesSharp className="text-3xl" />
+                </span>
+                <h1 className="font-semibold md:text-4xl text-2xl">
+                  Our Journey
+                </h1>
                 <p>
                   Our story is one of continuous growth and evolution. We
                   started as a small team with big dreams, determined to create
@@ -131,7 +136,12 @@ const About = () => {
           <div className="grid md:grid-cols-3 grid-cols-1 gap-10">
             <div className="flex flex-col gap-14 justify-center">
               <div className="flex flex-col gap-5">
-                <h1 className="font-semibold md:text-4xl text-2xl">Our Values</h1>
+                <span className="flex gap-1 items-center justify-start w-full">
+                  <IoSparklesSharp className="text-3xl" />
+                </span>
+                <h1 className="font-semibold md:text-4xl text-2xl">
+                  Our Values
+                </h1>
                 <p>
                   Our story is one of continuous growth and evolution. We
                   started as a small team with big dreams, determined to create
@@ -201,7 +211,12 @@ const About = () => {
 
           <div className="flex flex-col gap-14 justify-center">
             <div className="flex flex-col gap-5">
-              <h1 className="font-semibold md:text-4xl text-2xl">Our Achievements</h1>
+              <span className="flex gap-1 items-center justify-start w-full">
+                <IoSparklesSharp className="text-3xl" />
+              </span>
+              <h1 className="font-semibold md:text-4xl text-2xl">
+                Our Achievements
+              </h1>
               <p>
                 Our story is one of continuous growth and evolution. We started
                 as a small team with big dreams, determined to create a real
@@ -219,7 +234,9 @@ const About = () => {
                 </span>
               </div>
               <div className="flex flex-col gap-3 border-2 rounded-lg lg:p-10 p-5 text-start shadow-custom">
-                <span className="font-semibold md:text-2xl text-xl">Happy Clients</span>
+                <span className="font-semibold md:text-2xl text-xl">
+                  Happy Clients
+                </span>
                 <span className="md:text-base text-sm">
                   Our greatest achievement is the satisfaction of our clients.
                   Their success stories fuel our passion for what we do.
@@ -240,6 +257,9 @@ const About = () => {
 
           <div className="flex flex-col gap-14 justify-center">
             <div className="flex flex-col gap-5">
+              <span className="flex gap-1 items-center justify-start w-full">
+                <IoSparklesSharp className="text-3xl" />
+              </span>
               <h1 className="font-semibold md:text-4xl text-2xl">
                 Navigating the Estatein Experience
               </h1>
@@ -254,16 +274,12 @@ const About = () => {
                 {Experience?.map((data, index) => {
                   return (
                     <div className="flex flex-col">
-                      <div className="px-5 py-3 border-l border-BgPurple">
+                      <div className="px-5 py-3 border-l border-l-BgPurple">
                         <span className="font-semibold">Step {data.id}</span>
                       </div>
-                      <div className="h-full border rounded-b-xl rounded-r-xl bg-gradient-to-br from-BgPurple overflow-hidden pl-[1px] pt-[1px]">
-                        <div className="flex flex-col gap-4 lg:p-10 p-7  h-full bg-BgWhite">
-                          <h1 className="font-semibold text-2xl">
-                            {data.title}
-                          </h1>
-                          <p>{data.description}</p>
-                        </div>
+                      <div className="flex flex-col gap-4 lg:p-10 p-7 h-full border rounded-b-xl rounded-r-xl bg-gradient-linear opacity-100 border-l-BgPurple border-t-BgPurple">
+                        <h1 className="font-semibold text-2xl">{data.title}</h1>
+                        <p>{data.description}</p>
                       </div>
                     </div>
                   );
@@ -372,7 +388,12 @@ const About = () => {
 
           <div className="flex flex-col gap-14 justify-center">
             <div className="flex flex-col gap-5">
-              <h1 className="font-semibold md:text-4xl text-2xl">Meet the Estatein Team</h1>
+              <span className="flex gap-1 items-center justify-start w-full">
+                <IoSparklesSharp className="text-3xl" />
+              </span>
+              <h1 className="font-semibold md:text-4xl text-2xl">
+                Meet the Estatein Team
+              </h1>
               <p>
                 At Estatein, our success is driven by the dedication and
                 expertise of our team. Get to know the people behind our mission
@@ -410,7 +431,7 @@ const About = () => {
                             placeholder="Say Hello 👋"
                             className="w-full rounded-full ml-3 outline-none text-lg"
                           />
-                          <img src={Send} alt="" className="w-16"/>
+                          <img src={Send} alt="" className="w-16" />
                         </div>
                       </div>
                     </div>
@@ -422,7 +443,12 @@ const About = () => {
 
           <div className="flex flex-col gap-14 justify-center">
             <div className="flex flex-col gap-5">
-              <h1 className="font-semibold md:text-4xl text-2xl">Our Valued Clients</h1>
+              <span className="flex gap-1 items-center justify-start w-full">
+                <IoSparklesSharp className="text-3xl" />
+              </span>
+              <h1 className="font-semibold md:text-4xl text-2xl">
+                Our Valued Clients
+              </h1>
               <p>
                 At Estatein, we have had the privilege of working with a diverse
                 range of clients across various industries. Here are some of the
@@ -469,7 +495,7 @@ const About = () => {
                     <div className="flex lg:flex-row flex-col gap-5 justify-between items-start mb-6">
                       <div>
                         <p className="text-gray-400 text-sm mb-2">Since 2019</p>
-                        <h1 className="text-3xl font-bold">ABC Corporation</h1>
+                        <h1 className="md:text-3xl text-2xl font-bold">ABC Corporation</h1>
                       </div>
                       <button
                         variant="outline"
@@ -501,9 +527,7 @@ const About = () => {
                     </div>
 
                     <div className="p-4 rounded-xl border">
-                      <h3 className="text-lg mb-2">
-                        What They Said 🤗
-                      </h3>
+                      <h3 className="text-lg mb-2">What They Said 🤗</h3>
                       <p className="font-semibold">
                         Estatein's expertise in finding the perfect office space
                         for our expanding operations was invaluable. They truly
@@ -535,7 +559,7 @@ const About = () => {
         </div>
       </div>
 
-      <Explore/>
+      <Explore />
     </div>
   );
 };

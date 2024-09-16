@@ -39,9 +39,9 @@ const Navbar = () => {
       <header className="sticky top-0 z-50 flex justify-center items-center h-20 border w-full bg-BgWhite">
         <div className="container flex justify-center items-center w-full">
           <div className="flex justify-between items-center w-full mx-5">
-            <div>
+            <Link to={'/'}>
               <img src={logo} alt="" className="md:h-12 h-9" />
-            </div>
+            </Link>
             <div className="md:flex hidden">
               <ul className="flex justify-center items-center font-semibold">
                 <li

@@ -2,9 +2,10 @@ import React from "react";
 import img1 from "../../../assets/Image/img1.png";
 import img2 from "../../../assets/Image/img2.png";
 import img3 from "../../../assets/Image/img3.png";
-import { IoBed } from "react-icons/io5";
+import { IoBed, IoSparklesSharp } from "react-icons/io5";
 import { FaBath } from "react-icons/fa";
 import { HiMiniBuildingOffice } from "react-icons/hi2";
+// import { LuSparkle } from "react-icons/lu";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
@@ -12,6 +13,7 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
+import { LuSparkle } from "react-icons/lu";
 
 const FeaturedProperties = () => {
   const properties = [
@@ -58,8 +60,16 @@ const FeaturedProperties = () => {
   ];
   return (
     <div className="flex flex-col mx-5 justify-center items-center gap-5 w-full">
-      <div className="flex flex-col gap-3 w-full md:px-5">
-        <h1 className="text-3xl font-semibold">Featured Properties</h1>
+    {/* <span className="flex gap-1 items-center justify-start w-full">
+          <LuSparkle className="md:text-4xl text-3xl" />
+          <LuSparkle className="md:text-2xl text-xl opacity-50" />
+          <LuSparkle className="md:text-sm text-xs opacity-20" />
+        </span> */}
+      <div className="flex flex-col gap-3 w-full">
+        <span className="flex gap-1 items-center justify-start w-full">
+        <IoSparklesSharp className="text-3xl"/>
+        </span>
+        <h1 className="md:text-3xl text-2xl font-semibold">Featured Properties</h1>
         <div className="flex flex-row justify-between items-center">
           <p className="md:w-3/4 w-full md:text-base text-sm">
             Explore our handpicked selection of featured properties. Each
@@ -73,7 +83,7 @@ const FeaturedProperties = () => {
         </div>
       </div>
 
-      <div className="md:px-5">
+      <div className="">
         <div className="relative flex flex-col items-center justify-center pb-5 border-b">
           <Swiper
             modules={[Autoplay, Navigation]}
@@ -106,12 +116,13 @@ const FeaturedProperties = () => {
                 spaceBetween: 24,
               },
             }}
-            className="flex md:flex-row flex-col  md:container w-72 md:p-5"
+            // className="flex md:flex-row flex-col  md:container w-72 md:p-5"
+            className="grid grid-cols-3 md:container w-full md:pb-5 h-full"
           >
             {properties?.map((data, index) => {
               return (
                 <SwiperSlide
-                  className="border rounded-lg md:p-5 p-3 flex flex-col gap-5"
+                  className="border rounded-lg md:p-5 p-3 w-full flex flex-col gap-5"
                   key={index}
                 >
                   <div>
@@ -160,8 +171,8 @@ const FeaturedProperties = () => {
             })}
           </Swiper>
         </div>
-        <div className="flex flex-row gap-5 items-center justify-between md:p-4 py-4">
-          <button className="md:hidden text-sm flex border rounded-lg px-2 py-3 bg-[#f8f6ff] border-BgPurple text-BgPurple">
+        <div className="flex flex-row gap-5 items-center justify-between py-4">
+          <button className="md:hidden text-xs flex border rounded-lg p-3 bg-[#f8f6ff] border-BgPurple text-BgPurple">
             View All Properties
           </button>
           <span className="hidden md:flex gap-1">

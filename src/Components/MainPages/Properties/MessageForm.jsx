@@ -1,12 +1,16 @@
 import React from "react";
 import { ChevronDown, Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import { IoSparklesSharp } from "react-icons/io5";
 
 const MessageForm = () => {
   return (
     <>
       <div className="flex flex-col gap-3 w-full">
-        <h1 className="text-3xl font-semibold">Let's Make it Happen</h1>
+      <span className="flex gap-1 items-center justify-start w-full">
+          <IoSparklesSharp className="text-3xl" />
+        </span>
+        <h1 className="md:text-3xl text-2xl font-semibold">Let's Make it Happen</h1>
         <div className="flex flex-row justify-between items-center">
           <p className="w-full md:text-base text-sm">
             Ready to take the first step toward your dream property? Fill out
