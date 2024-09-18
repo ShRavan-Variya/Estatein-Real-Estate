@@ -1,11 +1,9 @@
 import React from "react";
-import profile1 from "../../../assets/Image/profile1.png";
-import profile2 from "../../../assets/Image/profile2.png";
-import profile3 from "../../../assets/Image/profile3.png";
+import profile1 from "../../../assets/Image/Profile1.png";
+import profile2 from "../../../assets/Image/Profile2.png";
+import profile3 from "../../../assets/Image/Profile3.png";
 import { FaStar } from "react-icons/fa";
-import { IoBed, IoSparklesSharp } from "react-icons/io5";
-import { FaBath } from "react-icons/fa";
-import { HiMiniBuildingOffice } from "react-icons/hi2";
+import { IoSparklesSharp } from "react-icons/io5";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
