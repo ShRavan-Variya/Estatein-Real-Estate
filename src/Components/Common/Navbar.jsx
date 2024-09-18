@@ -3,7 +3,7 @@ import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import AbstractDesign2 from "../../assets/Image/AbstractDesign2.png";
 import Group from "../../assets/Image/Group.png";
-import logo from "../../assets/Image/logo.png";
+import logo from "../../assets/Image/Logo.png";
 import { RxCross1 } from "react-icons/rx";
 import Footer from "./Footer";
 
